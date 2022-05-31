@@ -1,5 +1,5 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-@prefix ex: <https://github.com/mariasanvill/PopMusic/main/test/>  .
+@prefix ex: <https://github.com/mariasanvill/PopMusic/blob/main/test/>  .
 @prefix pm: <https://github.com/mariasanvill/PopMusic/main/Ontology/> .
 
 ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
