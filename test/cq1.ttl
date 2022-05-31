@@ -1,7 +1,7 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-@prefix tc: <https://github.com/mariasanvill/PopMusic/blob/main/test/>  .
-@prefix to: <https://github.com/mariasanvill/PopMusic/blob/main/Ontology/popMusic.owl> .
-@prefix pm: <https://github.com/mariasanvill/PopMusic/blob/main/Ontology/> .
+@prefix tc: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/test/>  .
+@prefix to: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/popMusic.owl> .
+@prefix pm: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/> .
 
 tc:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Which is the album a certain song?" ;
