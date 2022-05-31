@@ -1,11 +1,12 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-@prefix ex: <https://github.com/mariasanvill/PopMusic/blob/main/test/>  .
-@prefix pm: <https://github.com/mariasanvill/PopMusic/main/Ontology/> .
+@prefix tc: <https://github.com/mariasanvill/PopMusic/blob/main/test/>  .
+@prefix to: <https://github.com/mariasanvill/PopMusic/blob/main/Ontology/popMusic.owl> .
+@prefix pm: <https://github.com/mariasanvill/PopMusic/blob/main/Ontology/> .
 
-ex:cq1.ttl a owlunit:CompetencyQuestionVerification ;
+tc:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Which is the album a certain song?" ;
  	owlunit:hasSPARQLUnitTest "PREFIX pm: <https://github.com/mariasanvill/PopMusic>  SELECT ?Album {?SongVersion :hasTitle "Here comes the sun" .?Album :contains ?SongVersion }" ;
-	owlunit:hasInputData ex:datacq1.ttl ;
-	owlunit:hasInputTestDataCategory test:ToyDataset ;
-	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"interest\" ] } ,  \"results\": {  \"bindings\": [ {  \"interest\": {  \"type\":  \"uri\" ,  \"value\":  \"https://github.com/mariasanvill/PopMusic/Abbey Road\" } } ] } }";
+	owlunit:hasInputData tc:datacq1.ttl ;
+	owlunit:hasInputTestDataCategory tc:ToyDataset.ttl ;
+	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"Album\" ] } ,  \"results\": {  \"bindings\": [ {  \"Album\": {  \"type\":  \"uri\" ,  \"value\":  \"https://github.com/mariasanvill/PopMusic/toy-dataset/Abbey-Road\" } } ] } }";
 	owlunit:testsOntology pm: .
