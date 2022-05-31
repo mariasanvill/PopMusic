@@ -6,7 +6,8 @@
 
 tc:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Which is the album a certain song?" ;
- 	owlunit:hasSPARQLUnitTest "SELECT ?Album {?SongVersion pm:hasTitle "Here comes the sun" .?Album pm:contains ?SongVersion }" ;
+ 	owlunit:hasSPARQLUnitTest "SELECT ?Album {?SongVersion pm:hasTitle "Here comes the sun" ;
+						  ?Album pm:contains ?SongVersion }" ;
 	owlunit:hasInputData tc:datacq1.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"Album\" ] } ,  \"results\": {  \"bindings\": [ {  \"Album\": {  \"type\":  \"uri\" ,  \"value\":  \"https://github.com/mariasanvill/PopMusic/main/test/Abbey-Road\" } } ] } }";
