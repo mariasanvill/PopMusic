@@ -1,0 +1,286 @@
+@prefix : <http://www.semanticweb.org/ke/ont/popMusic#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ke/ont/popMusic> .
+
+<http://www.semanticweb.org/ke/ont/popMusic> rdf:type owl:Ontology ;
+                                              owl:imports <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
+                                              rdfs:comment "Ontology used for modelling pop music"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith
+dul:associatedWith owl:equivalentProperty dul:realizes .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember
+dul:hasMember owl:equivalentProperty :containsMusicians .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart
+dul:hasPart owl:equivalentProperty :containsSongVersions .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#realizes
+
+###  http://www.semanticweb.org/ke/ont/popMusic#containsMusicians
+:containsMusicians rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf dul:associatedWith ;
+                   rdfs:domain :Band ;
+                   rdfs:range :Musician ;
+                   rdfs:label "A relation between Band a Musician, where a Band is a set os Musicians."@en ,
+                              "containsMusician"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#containsSongVersions
+:containsSongVersions rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf dul:associatedWith ;
+                      rdfs:domain :Album ;
+                      rdfs:range :SongVersion ;
+                      rdfs:comment "A relation between Album and Song Version, where an Album is ocmposed by a collection of Song Versions."@en ;
+                      rdfs:label "containsSongVersions"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasAuthor
+:hasAuthor rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf dul:associatedWith ;
+           rdfs:domain :Song ;
+           rdfs:range :Artist ;
+           rdfs:comment "A relation between Song and Artitst, where the Arstits is itself the author of the Song."@en ;
+           rdfs:label "hasAuthor"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasCover
+:hasCover rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf dul:associatedWith ;
+          rdfs:domain :SongVersion ;
+          rdfs:range :Cover ;
+          rdfs:label "A realtion between a Song Version a Cover, where the Cover is attached to the Song Version."@en ,
+                     "hasCover"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasInstance
+:hasInstance rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf dul:associatedWith ;
+             rdfs:domain :Song ;
+             rdfs:range :SongVersion ;
+             rdfs:comment "A relation between Song and Song Version, where a Song can have more than one Song Version."@en ;
+             rdfs:label "hasInstance"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasMusicalFeature
+:hasMusicalFeature rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf dul:associatedWith ;
+                   rdfs:domain :SongVersion ;
+                   rdfs:range :MusicFeature ;
+                   rdfs:comment "A relation between Song Version and Musical Feautes, where a Song Version can have many Musical Features."@en ;
+                   rdfs:label "hasMusicalFeature"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasRelease
+:hasRelease rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dul:associatedWith ;
+            rdfs:domain :SongVersion ;
+            rdfs:range :Release ;
+            rdfs:comment "A relation between Song Version and Release."@en ;
+            rdfs:label "hasRelease"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#isPlayedBy
+:isPlayedBy rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf dul:associatedWith ;
+            rdfs:domain :SongVersion ;
+            rdfs:range :Artist ;
+            rdfs:label "A realtion between Song Version and Artist, where the Artist interprtaes the Song Version."@en ,
+                       "isPlayedBy"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#isProducedBy
+:isProducedBy rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf dul:associatedWith ;
+              rdfs:domain :SongVersion ;
+              rdfs:range :Artist ;
+              rdfs:comment "A realtion between a Song Version and a Producer."@en ;
+              rdfs:label "isProducedBy"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasEventDate
+dul:hasEventDate owl:equivalentProperty :hasDate .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasDate
+:hasDate rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf dul:hasDataValue ;
+         rdfs:domain :Release ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "A datatype property that indicates a date"@en ;
+         rdfs:label "hasDate"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasFacts
+:hasFacts rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf dul:hasDataValue ;
+          rdfs:domain :Song ;
+          rdfs:range xsd:string ;
+          rdfs:comment "A datatype property that encodes the facts of a song."@en ;
+          rdfs:label "hasFacts"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasLanguage
+:hasLanguage rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf dul:hasDataValue ;
+             rdfs:domain :SongVersion ;
+             rdfs:range xsd:language ;
+             rdfs:comment "A datatype property that encodes the language"@en ;
+             rdfs:label "hasLanguage"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasLyric
+:hasLyric rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf dul:hasDataValue ;
+          rdfs:domain :Song ;
+          rdfs:range xsd:string ;
+          rdfs:comment "A datatype property that encodes the lyric of a song"@en ;
+          rdfs:label "hasLyric"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasOriginalLanguage
+:hasOriginalLanguage rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :hasLanguage ;
+                     rdfs:domain :Song ;
+                     rdfs:range xsd:language ;
+                     rdfs:comment "A datatype property that encodes theoriginal language."@en ;
+                     rdfs:label "hasOriginalLanguage"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasOriginalTitle
+:hasOriginalTitle rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf :hasTitle ;
+                  rdfs:domain :Song ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "A datatype property that encodes the original title"@en ;
+                  rdfs:label "hasOriginalTitle"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasPlace
+:hasPlace rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf dul:hasDataValue ;
+          rdfs:domain :Release ;
+          rdfs:range xsd:string ;
+          rdfs:comment "A datatype property that encodes values from a place"@en ,
+                       "hasPlace"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasRate
+:hasRate rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf dul:hasDataValue ;
+         rdfs:domain :Release ;
+         rdfs:range xsd:double ;
+         rdfs:comment "A datatype property that encodes rates from xsd:double"@en ;
+         rdfs:label "hasRate"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#hasTitle
+:hasTitle rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf dul:hasDataValue ;
+          rdfs:domain :SongVersion ;
+          rdfs:range xsd:string ;
+          rdfs:comment "A datatype property that encodes the title"@en ;
+          rdfs:label "hasTitle"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Album
+:Album rdf:type owl:Class ;
+       rdfs:subClassOf dul:Collection ;
+       rdfs:comment "Collection of songs"@en ;
+       rdfs:label "Album"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Artist
+:Artist rdf:type owl:Class ;
+        rdfs:subClassOf dul:Agent ;
+        rdfs:comment "Entity that creates a song"@en ;
+        rdfs:label "Artist"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Band
+:Band rdf:type owl:Class ;
+      rdfs:subClassOf dul:Collection ,
+                      :Artist ;
+      rdfs:comment "Group of musicians"@en ;
+      rdfs:label "Band"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Chords
+:Chords rdf:type owl:Class ;
+        rdfs:subClassOf :MusicFeature .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Cover
+:Cover rdf:type owl:Class ;
+       rdfs:subClassOf dul:Entity ;
+       rdfs:comment "Image attached to a song"@en ;
+       rdfs:label "Cover"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Instrument
+:Instrument rdf:type owl:Class ;
+            rdfs:subClassOf :MusicFeature .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#MusicFeature
+:MusicFeature rdf:type owl:Class ;
+              rdfs:subClassOf dul:Entity ;
+              rdfs:comment "Musical chratceristics of each version of a song"@en ;
+              rdfs:label "Musical Feature"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Musician
+:Musician rdf:type owl:Class ;
+          rdfs:subClassOf dul:Person ,
+                          :Artist .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Producer
+:Producer rdf:type owl:Class ;
+          rdfs:subClassOf dul:PhysicalAgent ;
+          rdfs:comment "Agent that makes song verisons for sale."@en ;
+          rdfs:label "Producer"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Release
+:Release rdf:type owl:Class ;
+         rdfs:subClassOf dul:Entity ;
+         rdfs:comment "Making a music composition available to the public."@en ;
+         rdfs:label "Release"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#Song
+:Song rdf:type owl:Class ;
+      rdfs:subClassOf dul:Entity ;
+      rdfs:comment "Set of words meant to be sung/played."@en ;
+      rdfs:label "Song"@en .
+
+
+###  http://www.semanticweb.org/ke/ont/popMusic#SongVersion
+:SongVersion rdf:type owl:Class ;
+             rdfs:subClassOf dul:Event ;
+             rdfs:comment "Particular form of  a song"@en ;
+             rdfs:label "SongVersion"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
