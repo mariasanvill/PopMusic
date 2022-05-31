@@ -1,8 +1,8 @@
 @prefix owlunit: <https://w3id.org/OWLunit/ontology/> .
-@prefix tc: <https://github.com/mariasanvill/PopMusic/main/test/>  .
+@prefix tc: <https://github.com/mariasanvill/PopMusic/blob/main/test/>  .
 @prefix td: <https://github.com/mariasanvill/PopMusic/blob/main/toy-dataset/>.
-@prefix to: <https://github.com/mariasanvill/PopMusic/tree/main/Ontology/popMusic.owl> .
-@prefix pm: <https://github.com/mariasanvill/PopMusic/tree/main/Ontology/> .
+@prefix to: <https://github.com/mariasanvill/PopMusic/main/Ontology/popMusic.owl> .
+@prefix pm: <https://github.com/mariasanvill/PopMusic/main/Ontology/> .
 
 
 tc:cq1.ttl a owlunit:CompetencyQuestionVerification ;
