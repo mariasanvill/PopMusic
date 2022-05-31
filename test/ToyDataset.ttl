@@ -1,0 +1,4 @@
+@prefix pm: <https://github.com/mariasanvill/PopMusic> .
+
+pm:HereComesTheSun pm:hasTitle pm:"Here comes the sun" .
+pm:Abbey Road pm:contains pm:HereComesTheSun
