@@ -1,8 +1,0 @@
-@prefix td: <https://github.com/mariasanvill/PopMusic/toy-dataset/> .​
-
-
-td:SystemOfADown-FirenzeRocks2017 core:hasPlace td:Florence .
-@prefix pm: <https://github.com/mariasanvill/PopMusic/Ontology/popmusic.owl/> .
-
-pm:HereComesTheSun pm:hasTitle pm:"Here comes the sun" .
-pm:Abbey-Road pm:contains pm:HereComesTheSun
