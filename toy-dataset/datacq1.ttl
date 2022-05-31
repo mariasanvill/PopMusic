@@ -1,4 +1,4 @@
-@prefix tc: <https://github.com/mariasanvill/PopMusic/blob/main/test/>  .
+@prefix td: <https://github.com/mariasanvill/PopMusic/blob/main/toy-dataset/>  .
 @prefix pm: <https://github.com/mariasanvill/PopMusic/tree/main/Ontology/> .
 
-tc:AbbeyRoad pm:contains tc:HereComesTheSun
+td:AbbeyRoad pm:contains td:HereComesTheSun
