@@ -2,6 +2,7 @@
 @prefix tc: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/test/>  .
 @prefix to: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/popMusic.owl> .
 @prefix pm: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/> .
+@prefix xds: <http://www.w3.org/2001/XMLSchema#>
 
 tc:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Which is the album a certain song?" ;

@@ -1,6 +1,6 @@
 @prefix tc: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/test/>  .
 @prefix pm: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema/> .
+@prefix xds: <http://www.w3.org/2001/XMLSchema#> .
 
-tc:HereComesTheSun pm:hasTitle xsd:"Here comes the sun" .
+tc:HereComesTheSun pm:hasTitle xds:"Here comes the sun" .
 tc:Abbey-Road pm:contains tc:HereComesTheSun
