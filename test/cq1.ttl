@@ -6,7 +6,7 @@
 
 tc:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Which is the album a certain song?" ;
- 	owlunit:hasSPARQLUnitTest "SELECT ?Album {?SongVersion pm:hasTitle "Here comes the sun" ;
+ 	owlunit:hasSPARQLUnitTest "SELECT ?Album {?SongVersion pm:hasTitle 'Here comes the sun' .
 						  ?Album pm:contains ?SongVersion }" ;
 	owlunit:hasInputData tc:datacq1.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
