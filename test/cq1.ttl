@@ -4,8 +4,7 @@
 @prefix to: <https://github.com/mariasanvill/PopMusic/main/Ontology/popMusic.owl> .
 @prefix pm: <https://github.com/mariasanvill/PopMusic/main/Ontology/> .
 
-
-tc:cq1.ttl owlunit:CompetencyQuestionVerification ;
+tc:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Which is the album a certain song?" ;
  	owlunit:hasSPARQLUnitTest "SELECT ?Album {?Album pm:contains HereComesTheSun }" ;
 	owlunit:hasInputData td:datacq1.ttl ;
