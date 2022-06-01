@@ -9,5 +9,5 @@ tc:cq1.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasSPARQLUnitTest "prefix pop:<http://www.semanticweb.org/ke/ont/popMusic#> select ?Album where {?Album pop:containsSongVersions ?SongVersion}" ;
 	owlunit:hasInputData td:datacq1.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
-	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"Album\" ] } ,  \"results\": {  \"bindings\": [ {  \"Album\": {  \"type\":  \"uri\" ,  \"value\": \"https://raw.githubusercontent.com/mariasanvill/PopMusic/main/toy-dataset/AbbeyRoad\" } } ] } }";
+	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"Album\" ] } ,  \"results\": {  \"bindings\": [ {  \"Album\": {  \"type\":  \"uri\" ,  \"value\": \"https://w3id.org/OWLunit/examples/AbbeyRoad\" } } ] } }";
 	owlunit:testsOntology to: .
