@@ -1,4 +1,4 @@
 @prefix ex: <https://w3id.org/OWLunit/examples/> .
 @prefix pm: <http://www.semanticweb.org/ke/ont/popMusic#> .
 
-ex:AbbeyRoad pm:containsSongVersions ex:HereComesTheSun .
+pm:AbbeyRoad pm:containsSongVersions pm:HereComesTheSun .
