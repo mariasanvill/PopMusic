@@ -1,4 +1,0 @@
-@prefix td: <https://github.com/mariasanvill/PopMusic/blob/main/toy-dataset/>  .
-@prefix pm: <https://github.com/mariasanvill/PopMusic/tree/main/Ontology/> .
-
-td:AbbeyRoad pm:contains td:HereComesTheSun
