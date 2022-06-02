@@ -3,4 +3,4 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace>
 
 td:HereComesTheSun pm:hasTitle "Here comes the Sun" .
-td:HereComesTheSun pm:hasLanguage "EN" .
+td:HereComesTheSun pm:hasLanguage "EN".
