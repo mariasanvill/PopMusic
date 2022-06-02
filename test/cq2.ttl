@@ -5,8 +5,8 @@
 
 tc:cq2.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasCompetencyQuestion "Which are the albums released by a certain artist?" ;
- 	owlunit:hasSPARQLUnitTest "PREFIX pm:<https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/pM.owl> SELECT ?Artist WHERE{?Album :contains ?SongVersion .
-	?SongVersion :isPlayedBy ?Artist}" ;
+ 	owlunit:hasSPARQLUnitTest "PREFIX pm:<https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/pM.owl> SELECT ?Artist WHERE{?Album pm:containsSongVersions ?SongVersion .
+	?SongVersion pm:isPlayedBy ?Artist}" ;
 	owlunit:hasInputData td:datacq2.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
 	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"Artist\" ] } ,  \"results\": {  \"bindings\": [ {  \"Artist\": {  \"type\":  \"uri\" ,  \"value\": \"https://raw.githubusercontent.com/mariasanvill/PopMusic/main/toy-dataset/TheBeatles\" } } ] } }";
