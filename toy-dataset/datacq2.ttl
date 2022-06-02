@@ -2,4 +2,4 @@
 @prefix pm: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/popMusic.owl> .
 
 td:AbbeyRoad pm:containsSongVersions td:HereComesTheSun .
-td:HereComesTheSun pm:isplayedBy pm:TheBeatles
+td:HereComesTheSun pm:isPlayedBy pm:TheBeatles
