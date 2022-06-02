@@ -2,5 +2,5 @@
 @prefix pm: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/pM.owl> .
 
 
-td:HereComesTheSun pm:hasTitle td: "Here comes the Sun" .
+td:HereComesTheSun pm:hasTitle td:"Here comes the Sun" .
 td:AbbeyRoad pm:containsSongVersions td:HereComesTheSun .
