@@ -1,6 +1,6 @@
 @prefix td: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/toy-dataset/> .
 @prefix pm: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/popMusic.owl> .
-
+@prefix xml: <http://www.w3.org/XML/1998/namespace>
 
 td:HereComesTheSun pm:hasTitle "Here comes the Sun" .
-td:HereComesTheSun pm:hasLanguage @en .
+td:HereComesTheSun pm:hasLanguage xml:lang="en".
