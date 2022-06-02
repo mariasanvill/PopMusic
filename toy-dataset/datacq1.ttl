@@ -1,5 +1,6 @@
 @prefix td: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/toy-dataset/> .
 @prefix pm: <https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/pM.owl> .
+@prefix xds: <http://www.w3.org/2001/XMLSchema/> .
 
-td:HereComesTheSun pm:hasTitle td:"Here comes the Sun" .
+td:HereComesTheSun pm:hasTitle xds:'Here comes the Sun' .
 td:AbbeyRoad pm:containsSongVersions td:HereComesTheSun .
