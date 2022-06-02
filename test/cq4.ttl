@@ -8,5 +8,5 @@ tc:cq4.ttl a owlunit:CompetencyQuestionVerification ;
  	owlunit:hasSPARQLUnitTest "PREFIX pm:<https://raw.githubusercontent.com/mariasanvill/PopMusic/main/Ontology/popMusic.owl> SELECT ?Language WHERE{?SongVersion pm:hasTitle ?Title . ?SongVersion pm:hasLanguage ?Language .}" ;
 	owlunit:hasInputData td:datacq4.ttl ;
 	owlunit:hasInputTestDataCategory owlunit:ToyDataset ;
-	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"Language\" ] } ,  \"results\": {  \"bindings\": [ {  \"Language\": {  \"type\":  \"uri\" ,  \"value\": \"https://raw.githubusercontent.com/mariasanvill/PopMusic/main/toy-dataset/@en\" } } ] } }";
+	owlunit:hasExpectedResult "{  \"head\": {  \"vars\": [  \"Language\" ] } ,  \"results\": {  \"bindings\": [ {  \"Language\": {  \"type\":  \"uri\" ,  \"value\": \"https://raw.githubusercontent.com/mariasanvill/PopMusic/main/toy-dataset/'@en'\" } } ] } }";
 	owlunit:testsOntology pm: .

@@ -3,4 +3,4 @@
 
 
 td:HereComesTheSun pm:hasTitle "Here comes the Sun" .
-td:HereComesTheSun pm:hasLanguage '@en' .
+td:HereComesTheSun pm:hasLanguage @en .
