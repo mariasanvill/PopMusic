@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/KE/Ontology/PopMusic#"
+     xml:base="http://www.semanticweb.org/KE/Ontology/PopMusic"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#containsMusician"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#IsPublishedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#IsPublishedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Song"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Publisher"/>
+        <rdfs:label xml:lang="en">A relation between Song and Publisher, where the Publisher is reponsable of publishing the Song.</rdfs:label>
+        <rdfs:label xml:lang="en">isPublsihedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#containsMusician -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#containsMusician">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Band"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Musician"/>
+        <rdfs:comment xml:lang="en">A relation between Band and Musician, where a Band is a collection of Musicians.</rdfs:comment>
+        <rdfs:label xml:lang="en">containsMusician</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasRecording -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasRecording">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Song"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording"/>
+        <rdfs:comment xml:lang="en">A relation between Song and Recording, where a Song may have one or even more recordings.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasRecording</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasRelease -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasRelease">
+        <rdfs:comment xml:lang="en">A relation between Recoridng and Release, where a Recording may be released one or more times.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasRelease</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasVersion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasVersion">
+        <rdfs:comment xml:lang="en">A relation between Song and Version, where a Song may have one or even more versions.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasVersion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#isPlayedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#isPlayedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Song"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Musician"/>
+        <rdfs:comment xml:lang="en">A relation between Song and Musuician, where the Musician is itself the one who interpretates the Song.</rdfs:comment>
+        <rdfs:label xml:lang="en">isPlayedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasEventDate -->
+
+    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasEventDate">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#hasBeginDate"/>
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#hasDate"/>
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#hasEndDate"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasAnnotation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasAnnotation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Release"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates an annotation.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAnnotation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasAttribute -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasAttribute">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Musician"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates some attributes of a Musician.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasAttribute</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasBeginDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasBeginDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#hasDate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Band"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Musician"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates the dateof beginning.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasBeginDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Release"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates the date.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasDisambiguation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasDisambiguation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Release"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates a clarification.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasDisambiguation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasEndDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#hasDate"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Band"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Musician"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates the date of ending.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasEndDate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Song"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Version"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates the language.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasLanguage</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasLength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasLength">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates the length.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasLength</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Band"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Musician"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Publisher"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates the name.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasPacking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasPacking">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Release"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates the packaging.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasPacking</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Band"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Release"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates a place.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasPlace</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasRate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Band"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Song"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates a rate.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasRate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#hasTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Release"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Song"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/KE/Ontology/PopMusic#Version"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A datatype property that indicates the title.</rdfs:comment>
+        <rdfs:label xml:lang="en">hasTitle</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#Band -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#Band">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection"/>
+        <rdfs:comment xml:lang="en">Collection of musician under the same name.</rdfs:comment>
+        <rdfs:label xml:lang="en">Band</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#Musician -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#Musician">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Person"/>
+        <rdfs:label xml:lang="en">Musician</rdfs:label>
+        <rdfs:label xml:lang="en">Person who performs a song.</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#Publisher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalAgent"/>
+        <rdfs:label xml:lang="en">An agent that prepares songs to be broadcasted.</rdfs:label>
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#Recording -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#Recording">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+        <rdfs:comment xml:lang="en">Recording of a song for subsequent reproduction or broadcast.</rdfs:comment>
+        <rdfs:label xml:lang="en">Recording</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#Release -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#Release">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Action"/>
+        <rdfs:comment xml:lang="en">Making a recording available for the public.</rdfs:comment>
+        <rdfs:label xml:lang="en">Release</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#Song -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#Song">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:comment xml:lang="en">Set of words meant to be sung/played.</rdfs:comment>
+        <rdfs:label xml:lang="en">Song</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/KE/Ontology/PopMusic#Version -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/KE/Ontology/PopMusic#Version">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity"/>
+        <rdfs:label xml:lang="en">A particular form of a song,  differing in certain respects from an earlier song or other versions of the same song.</rdfs:label>
+        <rdfs:label xml:lang="en">Version</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
